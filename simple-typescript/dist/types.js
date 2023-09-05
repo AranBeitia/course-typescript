@@ -46,12 +46,12 @@ anyValue = 'a string';
 anyValue = 12;
 anyValue = true;
 // Type assertions
-const email = document.getElementById('email');
-if (email) {
-    email.addEventListener('change', (e) => {
-        // const input = e.currentTarget as HTMLInputElement
-        // console.log(input.value)
-        const input = e.currentTarget;
-        console.log(input.value);
-    });
-}
+// const email = document.getElementById('email')
+// if (email) {
+// 	email.addEventListener('change', (e) => {
+// 		// const input = e.currentTarget as HTMLInputElement
+// 		// console.log(input.value)
+// 		const input = <HTMLInputElement>e.currentTarget
+// 		console.log(input.value)
+// 	})
+// }
