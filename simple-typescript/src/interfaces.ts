@@ -8,7 +8,7 @@ interface b {
 }
 
 let valueA: a = { someProp: 1 } // tienen que asignarse todas las props
-let valueB: b = valueA // error
+// let valueB: b = valueA // error
 
 // interfaces
 interface Profile {

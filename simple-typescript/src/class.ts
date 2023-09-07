@@ -11,7 +11,9 @@ class Robot {
 		return Robot.availableColors.includes(color)
 	}
 
-	constructor(protected _name: string) {}
+	constructor(protected _name: string, color: string) {
+		this._color = color
+	}
 
 	askName() {
 		console.log(`My name is ${this._name}`)
@@ -39,8 +41,8 @@ class Robot {
 class FlyingRobot extends Robot {
 	private readonly jetpackSize: number
 
-	constructor(name: string, jetpackSize: number) {
-		super(name)
+	constructor(name: string, jetpackSize: number, color: string) {
+		super(name, color)
 		this.jetpackSize = jetpackSize
 		console.log(`acceso a prop ${this._name}`)
 	}
@@ -52,12 +54,12 @@ class FlyingRobot extends Robot {
 	}
 }
 
-const robot = new Robot('John')
+const robot = new Robot('John', 'yellow')
 robot.askName()
 
-const flyingRobot = new FlyingRobot('Kitty', 3)
+const flyingRobot = new FlyingRobot('Kitty', 3, 'pink')
 flyingRobot.move(10)
-console.log(`NO acceso a prop ${flyingRobot._name} --protected`)
+console.log(`NO acceso a prop ${flyingRobot.name} --protected`)
 // console.log(`Flying robot's jetpack size is ${flyingRobot.jetpackSize}`) // propiedad privada
 
 flyingRobot.name = 'Diana'

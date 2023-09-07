@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.child = exports.suma = exports.valA = void 0;
 let valueA = { someProp: 1 }; // tienen que asignarse todas las props
-let valueB = valueA; // error
 let profile = {
     name: 'Jon',
 };
