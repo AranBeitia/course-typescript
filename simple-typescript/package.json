@@ -6,7 +6,7 @@
 	"scripts": {
 		"build": "tsc",
 		"dev": "npx concurrently -k -n COMPILER,NODEMON -c yellow,blue \"tsc -w\" \"nodemon -w dist -q dist/index.js\" ",
-		"start": "npx concurrently -k -n COMPILER,NODEMON -c yellow,blue \"tsc -w\" \"nodemon -w dist -q dist/shopping/index.js\" "
+		"start": "npx concurrently -k -n COMPILER,NODEMON -c yellow,blue \"tsc -w\" \"nodemon -w dist -q dist/interfaces/index.js\" "
 	},
 	"author": "",
 	"license": "ISC",
